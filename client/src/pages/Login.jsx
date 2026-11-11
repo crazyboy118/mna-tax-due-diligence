@@ -11,7 +11,7 @@ export default function Login() {
   const [f, setF] = useState({ name: '', email: '', password: '' });
   const [err, setErr] = useState('');
   const [busy, setBusy] = useState(false);
-  if (user) return <Navigate to="/" replace />;
+  if (user) return <Navigate to="/dashboard" replace />;
 
   const set = (k) => (e) => setF({ ...f, [k]: e.target.value });
   const submit = async (e) => {
@@ -19,7 +19,7 @@ export default function Login() {
     setBusy(true); setErr('');
     try {
       mode === 'login' ? await login(f.email, f.password) : await register(f.name, f.email, f.password);
-      nav('/');
+      nav('/dashboard');
     } catch (ex) { setErr(errMsg(ex)); } finally { setBusy(false); }
   };
 

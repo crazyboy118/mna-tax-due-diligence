@@ -15,7 +15,8 @@ app.use(morgan('dev'));
 app.get('/api/health', (req, res) => res.json({ ok: true }));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/deals', require('./routes/deals'));
-app.use('/api/dashboard', require('./routes/dashboard'));
+app.use('/api/dashboard', require('./routes/dashboard')); 
+app.use('/api/onboarding', require('./routes/onboarding'));
 
 app.use(notFound);
 app.use(errorHandler);

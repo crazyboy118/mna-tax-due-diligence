@@ -10,7 +10,7 @@ export default function Layout() {
       <aside className="side">
         <div className="brand">Tax Diligence<small>M&amp;A deal room</small></div>
         <nav>
-          <NavLink to="/" end>Dashboard</NavLink>
+          <NavLink to="/dashboard">Dashboard</NavLink>
           <NavLink to="/deals">Deals</NavLink>
         </nav>
         <div className="me">
